@@ -11,12 +11,15 @@
 
 <body>
     <div>
+        @yield('titlecontent')
         @if (@session('success'))
             <h1>{{ session('success') }}</h1>
         @endif
     </div>
+    <div>
+        @yield('content')
+    </div>
 
-    @yield('content')
 </body>
 
 </html>
