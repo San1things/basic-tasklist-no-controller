@@ -5,11 +5,14 @@
 @endsection
 
 @section('content')
-    <a href="{{ route('task.create') }}">ADD</a>
+    <a href="{{ route('task.create') }}" class="btn btn-primary px-5">ADD</a>
 
-    @foreach ($tasks as $task)
-        <h3><a href="{{ route('task.show', ['task' => $task->id]) }}">{{ $task->title }}</a></h3>
-    @endforeach
+    <div class="list-group">
+        @foreach ($tasks as $task)
+        <a href="{{ route('task.show', ['task' => $task->id]) }}" class="list-group-item list-group-item-action">{{ $task->title }}</a>
+        @endforeach
+    </div>
+
 
     @if ($tasks->count())
         <nav>

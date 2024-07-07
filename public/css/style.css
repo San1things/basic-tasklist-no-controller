@@ -1,7 +1,35 @@
-input{
+input {
     font-size: 20px;
     width: 300px;
 }
-div{
+
+div {
     margin: 10px 0;
+}
+
+.main-wrapper {
+    font-family: 'Poetsen One';
+    width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.main-title{
+    font-size: 3rem;
+
+}
+
+.main-content{
+
+}
+
+.main-content .card-header{
+    font-size: 2rem;
+}
+
+.main-title .flash-msg{
+    font-size: 2.3rem;
+    color: green;
 }
