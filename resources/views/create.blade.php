@@ -1,29 +1,43 @@
 @extends('templates.template')
 
+@section('titlecontent')
+<h1>Create a task.</h1>
+@endsection
+
 @section('content')
     <form action="{{ route('task.store') }}" method="post">
         @csrf
         <div>
-            <label for="title">Title</label>
-            <input id="title" name="title" type="text" value="{{ old('title') }}"
-                @error('title')
-            placeholder="{{ $message }}"
-            @enderror>
-            <div>
+            <div class="form-floating">
+                <input class="form-control" id="title" name="title" type="text" value="{{ old('title') }}">
+                <label for="title">Title</label>
+                <p class="error-msg">
+                    @error('title')
+                        {{ $message }}
+                    @enderror
+                </p>
+            </div>
+            <div class="form-floating">
+                <input class="form-control" id="description" name="description" for="description" type="text" value="{{ old('description') }}"
+                    rows="5">
                 <label for="description">Description</label>
-                <input id="description" name="description" type="text" rows="5" value="{{ old('description') }}"
+                <p class="error-msg">
                     @error('description')
-            placeholder="{{ $message }}"
-            @enderror>
+                        {{ $message }}
+                    @enderror
+                </p>
             </div>
-            <div>
-                <label for="long_description">Long Description</label>
-                <input id="long_description" name="long_description" type="text" rows="10" value="{{ old('long_description') }}"
+            <div class="form-floating">
+                <input class="form-control" id="long_description" name="long_description" for="long_description" type="text" value="{{ old('description') }}"
+                    rows="5">
+                <label for="long_description">Description</label>
+                <p class="error-msg">
                     @error('long_description')
-            placeholder="{{ $message }}"
-            @enderror>
+                        {{ $message }}
+                    @enderror
+                </p>
             </div>
-            <button type="submit">Add Task</button>
+            <button class="btn btn-primary" type="submit">Add Task</button>
         </div>
     </form>
 @endsection

@@ -24,13 +24,12 @@
     <div class="main-wrapper">
         <div class="main-title">
             @yield('titlecontent')
-            <div class="flash-msg">
-                @if (@session('success'))
-                <h1>{{ session('success') }}</h1>
+            @if (@session('success'))
+                <div class="flash-msg">
+                    <h1>{{ session('success') }}</h1>
             @endif
-            </div>
-
         </div>
+
         <div class="main-content p-3 justify-content-center">
             @yield('content')
         </div>

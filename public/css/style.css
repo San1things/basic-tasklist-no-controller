@@ -32,4 +32,12 @@ div {
 .main-title .flash-msg{
     font-size: 2.3rem;
     color: green;
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    padding: 5rem;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+.error-msg{
+    font-size: 0.8rem;
+    color: red;
 }
